@@ -4,11 +4,18 @@ import RxCocoa
 
 class MakeupProductsViewController: UIViewController, Storyboarded {
     static var storyboardName = "FindMakeup"
-
+    
     var coordinator: FindMakeupProtocol?
     var viewModelBuilder: MakeupProductsViewModelBuilder?
     
     private let bag = DisposeBag()
+    
+    @IBOutlet weak var stepIndicatorView: StepIndicatorView!
+    @IBOutlet weak var productsTableView: UITableView!
+    @IBOutlet weak var buyProductButton: UIButton!
+    @IBOutlet weak var popupView: PopupView!
+    @IBOutlet weak var bottomNavigationView: BottomNavigationView!
+    @IBOutlet weak var footerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +25,14 @@ class MakeupProductsViewController: UIViewController, Storyboarded {
 
 private extension MakeupProductsViewController {
     func setup() {
+        setupUI()
+        setupViewModel()
+    }
+    
+    func setupViewModel() {
         if let viewModel = createViewModel() {
             bindViewModel(viewModel)
+            setupDataSource(withData: viewModel.products)
         }
     }
     
@@ -34,5 +47,15 @@ private extension MakeupProductsViewController {
                 print($0)
             })
             .disposed(by: bag)
+    }
+    
+    func setupDataSource(withData data: Observable<[Product]>) {
+        _ = MakeupProductsDatasource(withTableView: productsTableView, products: data)
+    }
+}
+
+private extension MakeupProductsViewController {
+    func setupUI() {
+        footerView.layer.addBorder(edge: .top, color: UIColor.themeGrayColor(), thickness: 0.5)
     }
 }

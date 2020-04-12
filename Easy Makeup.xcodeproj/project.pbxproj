@@ -14,6 +14,11 @@
 		B45050BC2443402C008278D7 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45050BB2443402C008278D7 /* RealmProvider.swift */; };
 		B45050BE2443409D008278D7 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45050BD2443409D008278D7 /* Product.swift */; };
 		B45050C024434C31008278D7 /* MakeupProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45050BF24434C31008278D7 /* MakeupProductsViewModel.swift */; };
+		B45050C324435787008278D7 /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45050C224435787008278D7 /* ProductsTableViewCell.swift */; };
+		B45050C624435C59008278D7 /* MakeupProductsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45050C524435C59008278D7 /* MakeupProductsDatasource.swift */; };
+		B45050C824436621008278D7 /* NumberFormatter+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45050C724436621008278D7 /* NumberFormatter+Utilities.swift */; };
+		B45050CB24436A69008278D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45050CA24436A69008278D7 /* Constants.swift */; };
+		B45050CD24436C40008278D7 /* CALayer+Borders.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45050CC24436C40008278D7 /* CALayer+Borders.swift */; };
 		B4517AFD2440D53800405A55 /* BottomNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4517AFC2440D53800405A55 /* BottomNavigationView.xib */; };
 		B4517B002440E20800405A55 /* BottomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4517AFF2440E20800405A55 /* BottomNavigationView.swift */; };
 		B4517B032440E7FD00405A55 /* CurrentStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4517B022440E7FD00405A55 /* CurrentStep.swift */; };
@@ -73,6 +78,11 @@
 		B45050BB2443402C008278D7 /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
 		B45050BD2443409D008278D7 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		B45050BF24434C31008278D7 /* MakeupProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeupProductsViewModel.swift; sourceTree = "<group>"; };
+		B45050C224435787008278D7 /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
+		B45050C524435C59008278D7 /* MakeupProductsDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeupProductsDatasource.swift; sourceTree = "<group>"; };
+		B45050C724436621008278D7 /* NumberFormatter+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Utilities.swift"; sourceTree = "<group>"; };
+		B45050CA24436A69008278D7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B45050CC24436C40008278D7 /* CALayer+Borders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Borders.swift"; sourceTree = "<group>"; };
 		B4517AFC2440D53800405A55 /* BottomNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomNavigationView.xib; sourceTree = "<group>"; };
 		B4517AFF2440E20800405A55 /* BottomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavigationView.swift; sourceTree = "<group>"; };
 		B4517B022440E7FD00405A55 /* CurrentStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStep.swift; sourceTree = "<group>"; };
@@ -168,6 +178,30 @@
 			path = Persisters;
 			sourceTree = "<group>";
 		};
+		B45050C124435749008278D7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B45050C224435787008278D7 /* ProductsTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B45050C424435C16008278D7 /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				B45050C524435C59008278D7 /* MakeupProductsDatasource.swift */,
+			);
+			path = Datasources;
+			sourceTree = "<group>";
+		};
+		B45050C924436A5B008278D7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B45050CA24436A69008278D7 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		B4517AFB2440D49A00405A55 /* BottomNavigationView */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +265,8 @@
 				B479BFB7243FD48800033AFE /* UIButton+Borders.swift */,
 				B4744BEB244093930037F010 /* UIColor+Additions.swift */,
 				B45050B824433F87008278D7 /* UIViewController+Rx.swift */,
+				B45050C724436621008278D7 /* NumberFormatter+Utilities.swift */,
+				B45050CC24436C40008278D7 /* CALayer+Borders.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -320,6 +356,7 @@
 		B49F71AA243F46740004BD66 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B45050C924436A5B008278D7 /* Constants */,
 				B4744BE8244090E80037F010 /* Views */,
 				B479BFB4243FC71D00033AFE /* Extensions */,
 				B4517AFE2440D63A00405A55 /* Coordinator */,
@@ -332,8 +369,10 @@
 			children = (
 				B45050BA24434011008278D7 /* Persisters */,
 				B4517B012440E79700405A55 /* Models */,
+				B45050C124435749008278D7 /* Views */,
 				B49F71B0243F48E70004BD66 /* ViewModels */,
 				B49F71B2243F49070004BD66 /* ViewControllers */,
+				B45050C424435C16008278D7 /* Datasources */,
 			);
 			path = "Find Makeup Module";
 			sourceTree = "<group>";
@@ -602,9 +641,12 @@
 				B49F71BC243F54580004BD66 /* MakeupProductsViewController.swift in Sources */,
 				B4517B082440F52900405A55 /* PopupView.swift in Sources */,
 				B479BFB6243FC73200033AFE /* UIFont+Styles.swift in Sources */,
+				B45050C624435C59008278D7 /* MakeupProductsDatasource.swift in Sources */,
+				B45050CD24436C40008278D7 /* CALayer+Borders.swift in Sources */,
 				B479BFB8243FD48800033AFE /* UIButton+Borders.swift in Sources */,
 				B45050BE2443409D008278D7 /* Product.swift in Sources */,
 				B49F71BE243F59460004BD66 /* FindMakeupProtocol.swift in Sources */,
+				B45050C824436621008278D7 /* NumberFormatter+Utilities.swift in Sources */,
 				B49F71AE243F477F0004BD66 /* Coordinator.swift in Sources */,
 				B45050C024434C31008278D7 /* MakeupProductsViewModel.swift in Sources */,
 				B4744BF12440AB200037F010 /* StepIndicatorView.swift in Sources */,
@@ -619,8 +661,10 @@
 				B4517B002440E20800405A55 /* BottomNavigationView.swift in Sources */,
 				B45050BC2443402C008278D7 /* RealmProvider.swift in Sources */,
 				B4517B032440E7FD00405A55 /* CurrentStep.swift in Sources */,
+				B45050C324435787008278D7 /* ProductsTableViewCell.swift in Sources */,
 				B4744BEA2440921A0037F010 /* CircleView.swift in Sources */,
 				B49F71AC243F46940004BD66 /* Storyboarded.swift in Sources */,
+				B45050CB24436A69008278D7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

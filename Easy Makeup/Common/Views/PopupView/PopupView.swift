@@ -20,6 +20,7 @@ class PopupView: UIView {
     private func nibSetup() {
         view = loadFromNib()
         view.frame = bounds
+        view.layer.addBorder(edge: .top, color: UIColor.gray, thickness: 0.5)
         addSubview(view)
     }
     

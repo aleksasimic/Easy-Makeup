@@ -11,7 +11,6 @@ final class RealmProvider: RealmProviderProtocol {
     func saveDataToRealm() {
         let realm = try! Realm()
         let products: Results<Product> = realm.objects(Product.self)
-        
         if products.count == 0 {
             try! realm.write() {
                 let newProducts = initializeProducts()
@@ -20,7 +19,6 @@ final class RealmProvider: RealmProviderProtocol {
                 }
             }
         }
-        
     }
     
     func getDataFromRealm() -> Observable<[Product]> {
@@ -47,7 +45,7 @@ final class RealmProvider: RealmProviderProtocol {
         let product2 = Product()
         product2.name = "Product2"
         product2.price = 35.50
-        product2.percentage = 0
+        product2.percentage = 25
         product2.imageUrl = ""
         
         let product3 = Product()
