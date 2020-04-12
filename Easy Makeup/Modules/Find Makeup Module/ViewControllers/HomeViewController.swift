@@ -41,6 +41,18 @@ private extension HomeViewController {
     }
 }
 
+extension HomeViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true)
+        
+        guard let image = info[.originalImage] as? UIImage else {
+            print("No image found")
+            return
+        }
+        print(image.size)
+    }
+}
+
 private extension String {
     static let ApplicationName = "Easy Makeup"
     static let TakeSelfie      = "Take a selfie"

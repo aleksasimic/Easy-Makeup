@@ -23,7 +23,24 @@ final class FindMakeupCoordinator: Coordinator {
 
 extension FindMakeupCoordinator: FindMakeupProtocol {
     func startTakingSelfie() {
-        //NOTE: This will be changed later on, it is here now because I am developing the part that shows products to user first
+        guard let currentVc = navigationController.topViewController else { return }
+        
+        let imagePicker = UIImagePickerController()
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
+            imagePicker.sourceType = .camera
+        } else if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
+            imagePicker.sourceType = .photoLibrary
+        }
+        
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = currentVc as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        imagePicker.modalPresentationStyle = .overFullScreen
+        
+        currentVc.present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func showProducts() {
         let vc = MakeupProductsViewController.instantiate()
         vc.coordinator = self
         vc.viewModelBuilder = { loadTrigger in
