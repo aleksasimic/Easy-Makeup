@@ -1,5 +1,6 @@
 import UIKit
 import RxSwift
+import SafariServices
 
 final class FindMakeupCoordinator: Coordinator {
     
@@ -26,8 +27,25 @@ extension FindMakeupCoordinator: FindMakeupProtocol {
         let vc = MakeupProductsViewController.instantiate()
         vc.coordinator = self
         vc.viewModelBuilder = { loadTrigger in
-            MakeupProductsViewModel(loadTrigger: loadTrigger, realmProvider: self.container.realmProvider)
+            MakeupProductsViewModel(loadTrigger: loadTrigger,
+                                    currentStep: Observable.just(CurrentStep.chooseProducts),
+                                    realmProvider: self.container.realmProvider)
         }
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func showProductsWebsite() {
+        guard let url = URL(string: Constants.ProductsLink) else { return }
+        
+        let svc = SFSafariViewController(url: url)
+        navigationController.present(svc, animated: true, completion: nil)
+    }
+    
+    func goBack() {
+        navigationController.popViewController(animated: true)
+    }
+}
+
+private struct Constants {
+    static let ProductsLink = "https://www.google.com"
 }

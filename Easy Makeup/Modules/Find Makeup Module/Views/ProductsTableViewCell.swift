@@ -22,7 +22,7 @@ class ProductsTableViewCell: UITableViewCell {
         let numberFormatter = NumberFormatter.commaSeparatedFormatter
         let formattedNumber = numberFormatter.string(from: NSNumber(value:product.price))
         productNameLabel.text = product.name
-        productPriceLabel.text = "\(formattedNumber ?? "") \(Constants.CurrencySymbol)"
+        productPriceLabel.text = "\(formattedNumber ?? "") \(CurrencyConstants.CurrencySymbol)"
         productDiscountLabel.text = "\(product.percentage)%"
     }
 }

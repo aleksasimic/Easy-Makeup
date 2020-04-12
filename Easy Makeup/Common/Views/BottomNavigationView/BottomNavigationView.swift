@@ -30,17 +30,42 @@ class BottomNavigationView: UIView {
         return UINib(nibName: "BottomNavigationView", bundle: Bundle.main).instantiate(withOwner: self, options: nil).first as! UIView
     }
     
-    func shouldHideNextButton(hidden: Bool) {
-        navigateNextStackView.isHidden = hidden
+    func setupViewForCurrentStep(step: CurrentStep) {
+        switch step {
+        case .takeSelfie:
+            setupTakeSelfieStep()
+        case .pickColor:
+            setupPickColorStep()
+        case .chooseProducts:
+            setupChooseProductsStep()
+        default:
+            break
+        }
+    }
+    
+    private func setupTakeSelfieStep() {
+        backLabel.text = String.TryAgain
+        self.backgroundColor = UIColor.themeGrayColorWithOpacity()
+    }
+    
+    private func setupPickColorStep() {
+        backLabel.text = String.Back
+        self.backgroundColor = UIColor.themeGrayColorWithOpacity()
+    }
+    
+    private func setupChooseProductsStep() {
+        backLabel.text = String.Back
+        navigateNextStackView.isHidden = true
+        self.backgroundColor = UIColor.themeGrayColor()
     }
     
     func setupLabels() {
-        backLabel.text = String.Back
         nextLabel.text = String.Next
     }
 }
 
 private extension String {
-    static let Back = "Back"
-    static let Next = "Next step"
+    static let Back     = "BACK"
+    static let Next     = "NEXT STEP"
+    static let TryAgain = "TRY AGAIN"
 }

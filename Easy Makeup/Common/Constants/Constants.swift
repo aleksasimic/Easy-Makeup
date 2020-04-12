@@ -1,5 +1,5 @@
 import Foundation
 
-struct Constants {
+struct CurrencyConstants {
     static let CurrencySymbol = "$"
 }

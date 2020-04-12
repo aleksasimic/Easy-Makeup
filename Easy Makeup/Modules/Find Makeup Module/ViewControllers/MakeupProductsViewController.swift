@@ -1,6 +1,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxGesture
 
 class MakeupProductsViewController: UIViewController, Storyboarded {
     static var storyboardName = "FindMakeup"
@@ -27,6 +28,7 @@ private extension MakeupProductsViewController {
     func setup() {
         setupUI()
         setupViewModel()
+        bindActions()
     }
     
     func setupViewModel() {
@@ -41,10 +43,32 @@ private extension MakeupProductsViewController {
     }
     
     func bindViewModel(_ viewModel: MakeupProductsViewModel) {
-        viewModel.products
+        viewModel.currentStep
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: {
-                print($0)
+            .subscribe(onNext: { [weak self] in
+                self?.bottomNavigationView.setupViewForCurrentStep(step: $0)
+            })
+            .disposed(by: bag)
+    }
+    
+    func bindActions() {
+        bottomNavigationView.navigateBackStackView.rx.tapGesture().skip(1)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] _ in
+                self?.coordinator?.goBack()
+            })
+            .disposed(by: bag)
+        
+        buyProductButton.rx.tap.asObservable()
+            .subscribe(onNext: { [weak self] in
+                self?.coordinator?.showProductsWebsite()
+            })
+            .disposed(by: bag)
+        
+        popupView.closeButton.rx.tap.asObservable()
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] in
+                self?.popupView.isHidden = true
             })
             .disposed(by: bag)
     }

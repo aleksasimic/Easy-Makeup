@@ -7,6 +7,7 @@ target 'Easy Makeup' do
 
   pod 'RxSwift', '~> 5'
   pod 'RxCocoa', '~> 5'
+  pod 'RxGesture'
   pod 'RealmSwift'
 
   # Pods for Easy Makeup
