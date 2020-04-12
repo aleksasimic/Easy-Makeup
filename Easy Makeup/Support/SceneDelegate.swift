@@ -13,7 +13,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let navigationController = UINavigationController()
         navigationController.isNavigationBarHidden = true
-        coordinator = FindMakeupCoordinator(navigationController: navigationController)
+        
+        let realmProvider = RealmProvider()
+        realmProvider.saveDataToRealm()
+        let container = FindMakeupContainer(realmProvider: realmProvider)
+        coordinator = FindMakeupCoordinator(navigationController: navigationController, container: container)
         coordinator?.start()
         
         applicationWindow.rootViewController = navigationController

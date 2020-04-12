@@ -10,6 +10,10 @@
 		5E1F8B21E59ECE832AD92F00 /* Pods_Easy_Makeup_Easy_MakeupUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D8FD18DB6F4633174CDED0 /* Pods_Easy_Makeup_Easy_MakeupUITests.framework */; };
 		6B60D1C9BE08E22FEAA2E5BE /* Pods_Easy_MakeupTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E8B4B42C24DA7286AFDE1D /* Pods_Easy_MakeupTests.framework */; };
 		A31536F4DEB5159764D223AA /* Pods_Easy_Makeup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116C09F8F579EF1A95444959 /* Pods_Easy_Makeup.framework */; };
+		B45050B924433F87008278D7 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45050B824433F87008278D7 /* UIViewController+Rx.swift */; };
+		B45050BC2443402C008278D7 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45050BB2443402C008278D7 /* RealmProvider.swift */; };
+		B45050BE2443409D008278D7 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45050BD2443409D008278D7 /* Product.swift */; };
+		B45050C024434C31008278D7 /* MakeupProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45050BF24434C31008278D7 /* MakeupProductsViewModel.swift */; };
 		B4517AFD2440D53800405A55 /* BottomNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4517AFC2440D53800405A55 /* BottomNavigationView.xib */; };
 		B4517B002440E20800405A55 /* BottomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4517AFF2440E20800405A55 /* BottomNavigationView.swift */; };
 		B4517B032440E7FD00405A55 /* CurrentStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4517B022440E7FD00405A55 /* CurrentStep.swift */; };
@@ -65,6 +69,10 @@
 		74EF06D8143ACAA0AEFEBA58 /* Pods-Easy Makeup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy Makeup.debug.xcconfig"; path = "Target Support Files/Pods-Easy Makeup/Pods-Easy Makeup.debug.xcconfig"; sourceTree = "<group>"; };
 		831DD187EB957C1CD5ACE91B /* Pods-Easy Makeup-Easy MakeupUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy Makeup-Easy MakeupUITests.release.xcconfig"; path = "Target Support Files/Pods-Easy Makeup-Easy MakeupUITests/Pods-Easy Makeup-Easy MakeupUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9BD65E832A74BC676FABD3A8 /* Pods-Easy MakeupTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy MakeupTests.release.xcconfig"; path = "Target Support Files/Pods-Easy MakeupTests/Pods-Easy MakeupTests.release.xcconfig"; sourceTree = "<group>"; };
+		B45050B824433F87008278D7 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
+		B45050BB2443402C008278D7 /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
+		B45050BD2443409D008278D7 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		B45050BF24434C31008278D7 /* MakeupProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeupProductsViewModel.swift; sourceTree = "<group>"; };
 		B4517AFC2440D53800405A55 /* BottomNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomNavigationView.xib; sourceTree = "<group>"; };
 		B4517AFF2440E20800405A55 /* BottomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavigationView.swift; sourceTree = "<group>"; };
 		B4517B022440E7FD00405A55 /* CurrentStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStep.swift; sourceTree = "<group>"; };
@@ -152,6 +160,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B45050BA24434011008278D7 /* Persisters */ = {
+			isa = PBXGroup;
+			children = (
+				B45050BB2443402C008278D7 /* RealmProvider.swift */,
+			);
+			path = Persisters;
+			sourceTree = "<group>";
+		};
 		B4517AFB2440D49A00405A55 /* BottomNavigationView */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				B4517B022440E7FD00405A55 /* CurrentStep.swift */,
+				B45050BD2443409D008278D7 /* Product.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,6 +230,7 @@
 				B479BFB5243FC73200033AFE /* UIFont+Styles.swift */,
 				B479BFB7243FD48800033AFE /* UIButton+Borders.swift */,
 				B4744BEB244093930037F010 /* UIColor+Additions.swift */,
+				B45050B824433F87008278D7 /* UIViewController+Rx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -312,6 +330,7 @@
 		B49F71AF243F48D00004BD66 /* Find Makeup Module */ = {
 			isa = PBXGroup;
 			children = (
+				B45050BA24434011008278D7 /* Persisters */,
 				B4517B012440E79700405A55 /* Models */,
 				B49F71B0243F48E70004BD66 /* ViewModels */,
 				B49F71B2243F49070004BD66 /* ViewControllers */,
@@ -322,6 +341,7 @@
 		B49F71B0243F48E70004BD66 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B45050BF24434C31008278D7 /* MakeupProductsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -583,17 +603,21 @@
 				B4517B082440F52900405A55 /* PopupView.swift in Sources */,
 				B479BFB6243FC73200033AFE /* UIFont+Styles.swift in Sources */,
 				B479BFB8243FD48800033AFE /* UIButton+Borders.swift in Sources */,
+				B45050BE2443409D008278D7 /* Product.swift in Sources */,
 				B49F71BE243F59460004BD66 /* FindMakeupProtocol.swift in Sources */,
 				B49F71AE243F477F0004BD66 /* Coordinator.swift in Sources */,
+				B45050C024434C31008278D7 /* MakeupProductsViewModel.swift in Sources */,
 				B4744BF12440AB200037F010 /* StepIndicatorView.swift in Sources */,
 				B49F71B4243F49700004BD66 /* FindMakeupCoordinator.swift in Sources */,
 				B49F71B8243F50AB0004BD66 /* TakeSelfieViewController.swift in Sources */,
+				B45050B924433F87008278D7 /* UIViewController+Rx.swift in Sources */,
 				B49F71C0243F59660004BD66 /* FindMakeupContainer.swift in Sources */,
 				B49F717A243F427A0004BD66 /* SceneDelegate.swift in Sources */,
 				B49F71B6243F4FF50004BD66 /* HomeViewController.swift in Sources */,
 				B4744BEC244093930037F010 /* UIColor+Additions.swift in Sources */,
 				B49F71BA243F52E30004BD66 /* ProcessSelfieViewController.swift in Sources */,
 				B4517B002440E20800405A55 /* BottomNavigationView.swift in Sources */,
+				B45050BC2443402C008278D7 /* RealmProvider.swift in Sources */,
 				B4517B032440E7FD00405A55 /* CurrentStep.swift in Sources */,
 				B4744BEA2440921A0037F010 /* CircleView.swift in Sources */,
 				B49F71AC243F46940004BD66 /* Storyboarded.swift in Sources */,
