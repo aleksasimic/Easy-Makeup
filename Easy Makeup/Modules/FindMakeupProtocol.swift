@@ -1,0 +1,3 @@
+protocol FindMakeupProtocol {
+    func startTakingSelfie()
+}

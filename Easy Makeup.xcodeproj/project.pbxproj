@@ -1,0 +1,930 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E1F8B21E59ECE832AD92F00 /* Pods_Easy_Makeup_Easy_MakeupUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D8FD18DB6F4633174CDED0 /* Pods_Easy_Makeup_Easy_MakeupUITests.framework */; };
+		6B60D1C9BE08E22FEAA2E5BE /* Pods_Easy_MakeupTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E8B4B42C24DA7286AFDE1D /* Pods_Easy_MakeupTests.framework */; };
+		A31536F4DEB5159764D223AA /* Pods_Easy_Makeup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116C09F8F579EF1A95444959 /* Pods_Easy_Makeup.framework */; };
+		B4517AFD2440D53800405A55 /* BottomNavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4517AFC2440D53800405A55 /* BottomNavigationView.xib */; };
+		B4517B002440E20800405A55 /* BottomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4517AFF2440E20800405A55 /* BottomNavigationView.swift */; };
+		B4517B032440E7FD00405A55 /* CurrentStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4517B022440E7FD00405A55 /* CurrentStep.swift */; };
+		B4517B062440F51100405A55 /* PopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4517B052440F51100405A55 /* PopupView.xib */; };
+		B4517B082440F52900405A55 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4517B072440F52900405A55 /* PopupView.swift */; };
+		B4744BEA2440921A0037F010 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4744BE92440921A0037F010 /* CircleView.swift */; };
+		B4744BEC244093930037F010 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4744BEB244093930037F010 /* UIColor+Additions.swift */; };
+		B4744BEF244098990037F010 /* StepIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4744BEE244098990037F010 /* StepIndicatorView.xib */; };
+		B4744BF12440AB200037F010 /* StepIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4744BF02440AB200037F010 /* StepIndicatorView.swift */; };
+		B479BFB6243FC73200033AFE /* UIFont+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B479BFB5243FC73200033AFE /* UIFont+Styles.swift */; };
+		B479BFB8243FD48800033AFE /* UIButton+Borders.swift in Sources */ = {isa = PBXBuildFile; fileRef = B479BFB7243FD48800033AFE /* UIButton+Borders.swift */; };
+		B49F7178243F427A0004BD66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F7177243F427A0004BD66 /* AppDelegate.swift */; };
+		B49F717A243F427A0004BD66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F7179243F427A0004BD66 /* SceneDelegate.swift */; };
+		B49F717F243F427A0004BD66 /* FindMakeup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B49F717D243F427A0004BD66 /* FindMakeup.storyboard */; };
+		B49F7181243F427B0004BD66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B49F7180243F427B0004BD66 /* Assets.xcassets */; };
+		B49F7184243F427B0004BD66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B49F7182243F427B0004BD66 /* LaunchScreen.storyboard */; };
+		B49F718F243F427C0004BD66 /* Easy_MakeupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F718E243F427C0004BD66 /* Easy_MakeupTests.swift */; };
+		B49F719A243F427C0004BD66 /* Easy_MakeupUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F7199243F427C0004BD66 /* Easy_MakeupUITests.swift */; };
+		B49F71AC243F46940004BD66 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F71AB243F46940004BD66 /* Storyboarded.swift */; };
+		B49F71AE243F477F0004BD66 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F71AD243F477F0004BD66 /* Coordinator.swift */; };
+		B49F71B4243F49700004BD66 /* FindMakeupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F71B3243F49700004BD66 /* FindMakeupCoordinator.swift */; };
+		B49F71B6243F4FF50004BD66 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F71B5243F4FF50004BD66 /* HomeViewController.swift */; };
+		B49F71B8243F50AB0004BD66 /* TakeSelfieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F71B7243F50AB0004BD66 /* TakeSelfieViewController.swift */; };
+		B49F71BA243F52E30004BD66 /* ProcessSelfieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F71B9243F52E30004BD66 /* ProcessSelfieViewController.swift */; };
+		B49F71BC243F54580004BD66 /* MakeupProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F71BB243F54580004BD66 /* MakeupProductsViewController.swift */; };
+		B49F71BE243F59460004BD66 /* FindMakeupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F71BD243F59460004BD66 /* FindMakeupProtocol.swift */; };
+		B49F71C0243F59660004BD66 /* FindMakeupContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F71BF243F59660004BD66 /* FindMakeupContainer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B49F718B243F427C0004BD66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B49F716C243F427A0004BD66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B49F7173243F427A0004BD66;
+			remoteInfo = "Easy Makeup";
+		};
+		B49F7196243F427C0004BD66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B49F716C243F427A0004BD66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B49F7173243F427A0004BD66;
+			remoteInfo = "Easy Makeup";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01E8B4B42C24DA7286AFDE1D /* Pods_Easy_MakeupTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Easy_MakeupTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		116C09F8F579EF1A95444959 /* Pods_Easy_Makeup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Easy_Makeup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		190A239739F29521D49D5073 /* Pods-Easy MakeupTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy MakeupTests.debug.xcconfig"; path = "Target Support Files/Pods-Easy MakeupTests/Pods-Easy MakeupTests.debug.xcconfig"; sourceTree = "<group>"; };
+		23D8FD18DB6F4633174CDED0 /* Pods_Easy_Makeup_Easy_MakeupUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Easy_Makeup_Easy_MakeupUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63DDDA76A55324BEC1AB9E4D /* Pods-Easy Makeup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy Makeup.release.xcconfig"; path = "Target Support Files/Pods-Easy Makeup/Pods-Easy Makeup.release.xcconfig"; sourceTree = "<group>"; };
+		74EF06D8143ACAA0AEFEBA58 /* Pods-Easy Makeup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy Makeup.debug.xcconfig"; path = "Target Support Files/Pods-Easy Makeup/Pods-Easy Makeup.debug.xcconfig"; sourceTree = "<group>"; };
+		831DD187EB957C1CD5ACE91B /* Pods-Easy Makeup-Easy MakeupUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy Makeup-Easy MakeupUITests.release.xcconfig"; path = "Target Support Files/Pods-Easy Makeup-Easy MakeupUITests/Pods-Easy Makeup-Easy MakeupUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9BD65E832A74BC676FABD3A8 /* Pods-Easy MakeupTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy MakeupTests.release.xcconfig"; path = "Target Support Files/Pods-Easy MakeupTests/Pods-Easy MakeupTests.release.xcconfig"; sourceTree = "<group>"; };
+		B4517AFC2440D53800405A55 /* BottomNavigationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BottomNavigationView.xib; sourceTree = "<group>"; };
+		B4517AFF2440E20800405A55 /* BottomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavigationView.swift; sourceTree = "<group>"; };
+		B4517B022440E7FD00405A55 /* CurrentStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStep.swift; sourceTree = "<group>"; };
+		B4517B052440F51100405A55 /* PopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupView.xib; sourceTree = "<group>"; };
+		B4517B072440F52900405A55 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		B4744BE92440921A0037F010 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		B4744BEB244093930037F010 /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
+		B4744BEE244098990037F010 /* StepIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepIndicatorView.xib; sourceTree = "<group>"; };
+		B4744BF02440AB200037F010 /* StepIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepIndicatorView.swift; sourceTree = "<group>"; };
+		B479BFB5243FC73200033AFE /* UIFont+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Styles.swift"; sourceTree = "<group>"; };
+		B479BFB7243FD48800033AFE /* UIButton+Borders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Borders.swift"; sourceTree = "<group>"; };
+		B49F7174243F427A0004BD66 /* Easy Makeup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy Makeup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B49F7177243F427A0004BD66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B49F7179243F427A0004BD66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B49F717E243F427A0004BD66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FindMakeup.storyboard; sourceTree = "<group>"; };
+		B49F7180243F427B0004BD66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B49F7183243F427B0004BD66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B49F7185243F427B0004BD66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B49F718A243F427C0004BD66 /* Easy MakeupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Easy MakeupTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B49F718E243F427C0004BD66 /* Easy_MakeupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Easy_MakeupTests.swift; sourceTree = "<group>"; };
+		B49F7190243F427C0004BD66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B49F7195243F427C0004BD66 /* Easy MakeupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Easy MakeupUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B49F7199243F427C0004BD66 /* Easy_MakeupUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Easy_MakeupUITests.swift; sourceTree = "<group>"; };
+		B49F719B243F427C0004BD66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B49F71AB243F46940004BD66 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		B49F71AD243F477F0004BD66 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B49F71B3243F49700004BD66 /* FindMakeupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMakeupCoordinator.swift; sourceTree = "<group>"; };
+		B49F71B5243F4FF50004BD66 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B49F71B7243F50AB0004BD66 /* TakeSelfieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeSelfieViewController.swift; sourceTree = "<group>"; };
+		B49F71B9243F52E30004BD66 /* ProcessSelfieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessSelfieViewController.swift; sourceTree = "<group>"; };
+		B49F71BB243F54580004BD66 /* MakeupProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeupProductsViewController.swift; sourceTree = "<group>"; };
+		B49F71BD243F59460004BD66 /* FindMakeupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMakeupProtocol.swift; sourceTree = "<group>"; };
+		B49F71BF243F59660004BD66 /* FindMakeupContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMakeupContainer.swift; sourceTree = "<group>"; };
+		DB67E4808BFE007578350315 /* Pods-Easy Makeup-Easy MakeupUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy Makeup-Easy MakeupUITests.debug.xcconfig"; path = "Target Support Files/Pods-Easy Makeup-Easy MakeupUITests/Pods-Easy Makeup-Easy MakeupUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B49F7171243F427A0004BD66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A31536F4DEB5159764D223AA /* Pods_Easy_Makeup.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B49F7187243F427C0004BD66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B60D1C9BE08E22FEAA2E5BE /* Pods_Easy_MakeupTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B49F7192243F427C0004BD66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E1F8B21E59ECE832AD92F00 /* Pods_Easy_Makeup_Easy_MakeupUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		301DBE33E47F6D2D7DDF1AFB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				116C09F8F579EF1A95444959 /* Pods_Easy_Makeup.framework */,
+				23D8FD18DB6F4633174CDED0 /* Pods_Easy_Makeup_Easy_MakeupUITests.framework */,
+				01E8B4B42C24DA7286AFDE1D /* Pods_Easy_MakeupTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A823F8FA2D14880EDA93D955 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74EF06D8143ACAA0AEFEBA58 /* Pods-Easy Makeup.debug.xcconfig */,
+				63DDDA76A55324BEC1AB9E4D /* Pods-Easy Makeup.release.xcconfig */,
+				DB67E4808BFE007578350315 /* Pods-Easy Makeup-Easy MakeupUITests.debug.xcconfig */,
+				831DD187EB957C1CD5ACE91B /* Pods-Easy Makeup-Easy MakeupUITests.release.xcconfig */,
+				190A239739F29521D49D5073 /* Pods-Easy MakeupTests.debug.xcconfig */,
+				9BD65E832A74BC676FABD3A8 /* Pods-Easy MakeupTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B4517AFB2440D49A00405A55 /* BottomNavigationView */ = {
+			isa = PBXGroup;
+			children = (
+				B4517AFF2440E20800405A55 /* BottomNavigationView.swift */,
+				B4517AFC2440D53800405A55 /* BottomNavigationView.xib */,
+			);
+			path = BottomNavigationView;
+			sourceTree = "<group>";
+		};
+		B4517AFE2440D63A00405A55 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B49F71AB243F46940004BD66 /* Storyboarded.swift */,
+				B49F71AD243F477F0004BD66 /* Coordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B4517B012440E79700405A55 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B4517B022440E7FD00405A55 /* CurrentStep.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B4517B042440F4FF00405A55 /* PopupView */ = {
+			isa = PBXGroup;
+			children = (
+				B4517B072440F52900405A55 /* PopupView.swift */,
+				B4517B052440F51100405A55 /* PopupView.xib */,
+			);
+			path = PopupView;
+			sourceTree = "<group>";
+		};
+		B4744BE8244090E80037F010 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B4744BED2440986A0037F010 /* StepIndicatorView */,
+				B4517B042440F4FF00405A55 /* PopupView */,
+				B4517AFB2440D49A00405A55 /* BottomNavigationView */,
+				B4744BE92440921A0037F010 /* CircleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B4744BED2440986A0037F010 /* StepIndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				B4744BF02440AB200037F010 /* StepIndicatorView.swift */,
+				B4744BEE244098990037F010 /* StepIndicatorView.xib */,
+			);
+			path = StepIndicatorView;
+			sourceTree = "<group>";
+		};
+		B479BFB4243FC71D00033AFE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B479BFB5243FC73200033AFE /* UIFont+Styles.swift */,
+				B479BFB7243FD48800033AFE /* UIButton+Borders.swift */,
+				B4744BEB244093930037F010 /* UIColor+Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B49F716B243F427A0004BD66 = {
+			isa = PBXGroup;
+			children = (
+				B49F7176243F427A0004BD66 /* Easy Makeup */,
+				B49F718D243F427C0004BD66 /* Easy MakeupTests */,
+				B49F7198243F427C0004BD66 /* Easy MakeupUITests */,
+				B49F7175243F427A0004BD66 /* Products */,
+				A823F8FA2D14880EDA93D955 /* Pods */,
+				301DBE33E47F6D2D7DDF1AFB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B49F7175243F427A0004BD66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B49F7174243F427A0004BD66 /* Easy Makeup.app */,
+				B49F718A243F427C0004BD66 /* Easy MakeupTests.xctest */,
+				B49F7195243F427C0004BD66 /* Easy MakeupUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B49F7176243F427A0004BD66 /* Easy Makeup */ = {
+			isa = PBXGroup;
+			children = (
+				B49F71AA243F46740004BD66 /* Common */,
+				B49F71A9243F456C0004BD66 /* Modules */,
+				B49F71A8243F44AD0004BD66 /* Resources */,
+				B49F71A7243F43B50004BD66 /* Support */,
+			);
+			path = "Easy Makeup";
+			sourceTree = "<group>";
+		};
+		B49F718D243F427C0004BD66 /* Easy MakeupTests */ = {
+			isa = PBXGroup;
+			children = (
+				B49F718E243F427C0004BD66 /* Easy_MakeupTests.swift */,
+				B49F7190243F427C0004BD66 /* Info.plist */,
+			);
+			path = "Easy MakeupTests";
+			sourceTree = "<group>";
+		};
+		B49F7198243F427C0004BD66 /* Easy MakeupUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B49F7199243F427C0004BD66 /* Easy_MakeupUITests.swift */,
+				B49F719B243F427C0004BD66 /* Info.plist */,
+			);
+			path = "Easy MakeupUITests";
+			sourceTree = "<group>";
+		};
+		B49F71A7243F43B50004BD66 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				B49F7182243F427B0004BD66 /* LaunchScreen.storyboard */,
+				B49F7177243F427A0004BD66 /* AppDelegate.swift */,
+				B49F7179243F427A0004BD66 /* SceneDelegate.swift */,
+				B49F7185243F427B0004BD66 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		B49F71A8243F44AD0004BD66 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B49F7180243F427B0004BD66 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B49F71A9243F456C0004BD66 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B49F71AF243F48D00004BD66 /* Find Makeup Module */,
+				B49F71BF243F59660004BD66 /* FindMakeupContainer.swift */,
+				B49F71B3243F49700004BD66 /* FindMakeupCoordinator.swift */,
+				B49F71BD243F59460004BD66 /* FindMakeupProtocol.swift */,
+				B49F717D243F427A0004BD66 /* FindMakeup.storyboard */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B49F71AA243F46740004BD66 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B4744BE8244090E80037F010 /* Views */,
+				B479BFB4243FC71D00033AFE /* Extensions */,
+				B4517AFE2440D63A00405A55 /* Coordinator */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B49F71AF243F48D00004BD66 /* Find Makeup Module */ = {
+			isa = PBXGroup;
+			children = (
+				B4517B012440E79700405A55 /* Models */,
+				B49F71B0243F48E70004BD66 /* ViewModels */,
+				B49F71B2243F49070004BD66 /* ViewControllers */,
+			);
+			path = "Find Makeup Module";
+			sourceTree = "<group>";
+		};
+		B49F71B0243F48E70004BD66 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B49F71B2243F49070004BD66 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B49F71B5243F4FF50004BD66 /* HomeViewController.swift */,
+				B49F71B7243F50AB0004BD66 /* TakeSelfieViewController.swift */,
+				B49F71B9243F52E30004BD66 /* ProcessSelfieViewController.swift */,
+				B49F71BB243F54580004BD66 /* MakeupProductsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B49F7173243F427A0004BD66 /* Easy Makeup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B49F719E243F427C0004BD66 /* Build configuration list for PBXNativeTarget "Easy Makeup" */;
+			buildPhases = (
+				5A19A47F9EA20205DD4FB9EC /* [CP] Check Pods Manifest.lock */,
+				B49F7170243F427A0004BD66 /* Sources */,
+				B49F7171243F427A0004BD66 /* Frameworks */,
+				B49F7172243F427A0004BD66 /* Resources */,
+				AE940794E776A4D608209247 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Easy Makeup";
+			productName = "Easy Makeup";
+			productReference = B49F7174243F427A0004BD66 /* Easy Makeup.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B49F7189243F427C0004BD66 /* Easy MakeupTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B49F71A1243F427C0004BD66 /* Build configuration list for PBXNativeTarget "Easy MakeupTests" */;
+			buildPhases = (
+				7965372904AFD9698332215A /* [CP] Check Pods Manifest.lock */,
+				B49F7186243F427C0004BD66 /* Sources */,
+				B49F7187243F427C0004BD66 /* Frameworks */,
+				B49F7188243F427C0004BD66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B49F718C243F427C0004BD66 /* PBXTargetDependency */,
+			);
+			name = "Easy MakeupTests";
+			productName = "Easy MakeupTests";
+			productReference = B49F718A243F427C0004BD66 /* Easy MakeupTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B49F7194243F427C0004BD66 /* Easy MakeupUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B49F71A4243F427C0004BD66 /* Build configuration list for PBXNativeTarget "Easy MakeupUITests" */;
+			buildPhases = (
+				65431517EE2B484B2FB8A345 /* [CP] Check Pods Manifest.lock */,
+				B49F7191243F427C0004BD66 /* Sources */,
+				B49F7192243F427C0004BD66 /* Frameworks */,
+				B49F7193243F427C0004BD66 /* Resources */,
+				10923CC06137A0872C43A303 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B49F7197243F427C0004BD66 /* PBXTargetDependency */,
+			);
+			name = "Easy MakeupUITests";
+			productName = "Easy MakeupUITests";
+			productReference = B49F7195243F427C0004BD66 /* Easy MakeupUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B49F716C243F427A0004BD66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				TargetAttributes = {
+					B49F7173243F427A0004BD66 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					B49F7189243F427C0004BD66 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = B49F7173243F427A0004BD66;
+					};
+					B49F7194243F427C0004BD66 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = B49F7173243F427A0004BD66;
+					};
+				};
+			};
+			buildConfigurationList = B49F716F243F427A0004BD66 /* Build configuration list for PBXProject "Easy Makeup" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B49F716B243F427A0004BD66;
+			productRefGroup = B49F7175243F427A0004BD66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B49F7173243F427A0004BD66 /* Easy Makeup */,
+				B49F7189243F427C0004BD66 /* Easy MakeupTests */,
+				B49F7194243F427C0004BD66 /* Easy MakeupUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B49F7172243F427A0004BD66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B49F7184243F427B0004BD66 /* LaunchScreen.storyboard in Resources */,
+				B49F7181243F427B0004BD66 /* Assets.xcassets in Resources */,
+				B4517AFD2440D53800405A55 /* BottomNavigationView.xib in Resources */,
+				B4517B062440F51100405A55 /* PopupView.xib in Resources */,
+				B4744BEF244098990037F010 /* StepIndicatorView.xib in Resources */,
+				B49F717F243F427A0004BD66 /* FindMakeup.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B49F7188243F427C0004BD66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B49F7193243F427C0004BD66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10923CC06137A0872C43A303 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Easy Makeup-Easy MakeupUITests/Pods-Easy Makeup-Easy MakeupUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Easy Makeup-Easy MakeupUITests/Pods-Easy Makeup-Easy MakeupUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Easy Makeup-Easy MakeupUITests/Pods-Easy Makeup-Easy MakeupUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A19A47F9EA20205DD4FB9EC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Easy Makeup-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65431517EE2B484B2FB8A345 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Easy Makeup-Easy MakeupUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7965372904AFD9698332215A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Easy MakeupTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE940794E776A4D608209247 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Easy Makeup/Pods-Easy Makeup-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Easy Makeup/Pods-Easy Makeup-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Easy Makeup/Pods-Easy Makeup-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B49F7170243F427A0004BD66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B49F7178243F427A0004BD66 /* AppDelegate.swift in Sources */,
+				B49F71BC243F54580004BD66 /* MakeupProductsViewController.swift in Sources */,
+				B4517B082440F52900405A55 /* PopupView.swift in Sources */,
+				B479BFB6243FC73200033AFE /* UIFont+Styles.swift in Sources */,
+				B479BFB8243FD48800033AFE /* UIButton+Borders.swift in Sources */,
+				B49F71BE243F59460004BD66 /* FindMakeupProtocol.swift in Sources */,
+				B49F71AE243F477F0004BD66 /* Coordinator.swift in Sources */,
+				B4744BF12440AB200037F010 /* StepIndicatorView.swift in Sources */,
+				B49F71B4243F49700004BD66 /* FindMakeupCoordinator.swift in Sources */,
+				B49F71B8243F50AB0004BD66 /* TakeSelfieViewController.swift in Sources */,
+				B49F71C0243F59660004BD66 /* FindMakeupContainer.swift in Sources */,
+				B49F717A243F427A0004BD66 /* SceneDelegate.swift in Sources */,
+				B49F71B6243F4FF50004BD66 /* HomeViewController.swift in Sources */,
+				B4744BEC244093930037F010 /* UIColor+Additions.swift in Sources */,
+				B49F71BA243F52E30004BD66 /* ProcessSelfieViewController.swift in Sources */,
+				B4517B002440E20800405A55 /* BottomNavigationView.swift in Sources */,
+				B4517B032440E7FD00405A55 /* CurrentStep.swift in Sources */,
+				B4744BEA2440921A0037F010 /* CircleView.swift in Sources */,
+				B49F71AC243F46940004BD66 /* Storyboarded.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B49F7186243F427C0004BD66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B49F718F243F427C0004BD66 /* Easy_MakeupTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B49F7191243F427C0004BD66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B49F719A243F427C0004BD66 /* Easy_MakeupUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B49F718C243F427C0004BD66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B49F7173243F427A0004BD66 /* Easy Makeup */;
+			targetProxy = B49F718B243F427C0004BD66 /* PBXContainerItemProxy */;
+		};
+		B49F7197243F427C0004BD66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B49F7173243F427A0004BD66 /* Easy Makeup */;
+			targetProxy = B49F7196243F427C0004BD66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B49F717D243F427A0004BD66 /* FindMakeup.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B49F717E243F427A0004BD66 /* Base */,
+			);
+			name = FindMakeup.storyboard;
+			sourceTree = "<group>";
+		};
+		B49F7182243F427B0004BD66 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B49F7183243F427B0004BD66 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B49F719C243F427C0004BD66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B49F719D243F427C0004BD66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B49F719F243F427C0004BD66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74EF06D8143ACAA0AEFEBA58 /* Pods-Easy Makeup.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Easy Makeup/Support/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "aleksasimic.Easy-Makeup";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B49F71A0243F427C0004BD66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63DDDA76A55324BEC1AB9E4D /* Pods-Easy Makeup.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Easy Makeup/Support/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "aleksasimic.Easy-Makeup";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B49F71A2243F427C0004BD66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 190A239739F29521D49D5073 /* Pods-Easy MakeupTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Easy MakeupTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "aleksasimic.Easy-MakeupTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Easy Makeup.app/Easy Makeup";
+			};
+			name = Debug;
+		};
+		B49F71A3243F427C0004BD66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BD65E832A74BC676FABD3A8 /* Pods-Easy MakeupTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Easy MakeupTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "aleksasimic.Easy-MakeupTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Easy Makeup.app/Easy Makeup";
+			};
+			name = Release;
+		};
+		B49F71A5243F427C0004BD66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB67E4808BFE007578350315 /* Pods-Easy Makeup-Easy MakeupUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Easy MakeupUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "aleksasimic.Easy-MakeupUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Easy Makeup";
+			};
+			name = Debug;
+		};
+		B49F71A6243F427C0004BD66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 831DD187EB957C1CD5ACE91B /* Pods-Easy Makeup-Easy MakeupUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Easy MakeupUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "aleksasimic.Easy-MakeupUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Easy Makeup";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B49F716F243F427A0004BD66 /* Build configuration list for PBXProject "Easy Makeup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B49F719C243F427C0004BD66 /* Debug */,
+				B49F719D243F427C0004BD66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B49F719E243F427C0004BD66 /* Build configuration list for PBXNativeTarget "Easy Makeup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B49F719F243F427C0004BD66 /* Debug */,
+				B49F71A0243F427C0004BD66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B49F71A1243F427C0004BD66 /* Build configuration list for PBXNativeTarget "Easy MakeupTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B49F71A2243F427C0004BD66 /* Debug */,
+				B49F71A3243F427C0004BD66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B49F71A4243F427C0004BD66 /* Build configuration list for PBXNativeTarget "Easy MakeupUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B49F71A5243F427C0004BD66 /* Debug */,
+				B49F71A6243F427C0004BD66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B49F716C243F427A0004BD66 /* Project object */;
+}

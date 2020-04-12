@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BottomNavigationView" customModule="Easy_Makeup" customModuleProvider="target">
+            <connections>
+                <outlet property="backLabel" destination="0TP-TG-84Z" id="f55-g3-MlV"/>
+                <outlet property="navigateBackStackView" destination="iPe-7t-wRP" id="Dgc-W1-T6g"/>
+                <outlet property="navigateNextStackView" destination="7K3-Sp-gFA" id="sap-dO-DGh"/>
+                <outlet property="nextLabel" destination="JtB-y3-gFp" id="NMu-Mh-AKe"/>
+                <outlet property="view" destination="iN0-l3-epB" id="uQ8-gF-aq7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iPe-7t-wRP">
+                    <rect key="frame" x="30" y="15" width="80.5" height="30"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navigation_back" translatesAutoresizingMaskIntoConstraints="NO" id="yt7-Y1-VwZ">
+                            <rect key="frame" x="0.0" y="0.0" width="24" height="30"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BACK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0TP-TG-84Z">
+                            <rect key="frame" x="34" y="0.0" width="46.5" height="30"/>
+                            <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7K3-Sp-gFA">
+                    <rect key="frame" x="261.5" y="15" width="122.5" height="30"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEXT STEP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JtB-y3-gFp">
+                            <rect key="frame" x="0.0" y="0.0" width="88.5" height="30"/>
+                            <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navigation_next" translatesAutoresizingMaskIntoConstraints="NO" id="b9O-fM-Hbl">
+                            <rect key="frame" x="98.5" y="0.0" width="24" height="30"/>
+                        </imageView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="iPe-7t-wRP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="3cU-Yq-86i"/>
+                <constraint firstAttribute="bottom" secondItem="iPe-7t-wRP" secondAttribute="bottom" constant="15" id="59d-1i-Nid"/>
+                <constraint firstItem="7K3-Sp-gFA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iPe-7t-wRP" secondAttribute="trailing" id="7Ae-dd-QBy"/>
+                <constraint firstAttribute="trailing" secondItem="7K3-Sp-gFA" secondAttribute="trailing" constant="30" id="PJJ-t3-VEw"/>
+                <constraint firstItem="7K3-Sp-gFA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="W5d-gy-o3s"/>
+                <constraint firstItem="iPe-7t-wRP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="WCg-rG-pfK"/>
+                <constraint firstAttribute="bottom" secondItem="7K3-Sp-gFA" secondAttribute="bottom" constant="15" id="ozL-f2-e4Z"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="151"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="navigation_back" width="24" height="24"/>
+        <image name="navigation_next" width="24" height="24"/>
+    </resources>
+</document>
