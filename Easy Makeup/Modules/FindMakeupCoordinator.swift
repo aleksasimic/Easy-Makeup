@@ -40,6 +40,17 @@ extension FindMakeupCoordinator: FindMakeupProtocol {
         currentVc.present(imagePicker, animated: true, completion: nil)
     }
     
+    func startProcessingImage(image: UIImage) {
+        let vc = ProcessSelfieViewController.instantiate()
+        
+        vc.coordinator = self
+        vc.viewModelBuilder = {
+            ProcessSelfieViewModel(currentImage: Observable.just(image), step: Observable.just(CurrentStep.takeSelfie))
+        }
+        
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
     func showProducts() {
         let vc = MakeupProductsViewController.instantiate()
         vc.coordinator = self

@@ -46,10 +46,10 @@ extension HomeViewController: UINavigationControllerDelegate, UIImagePickerContr
         picker.dismiss(animated: true)
         
         guard let image = info[.originalImage] as? UIImage else {
-            print("No image found")
             return
         }
-        print(image.size)
+        
+        coordinator?.startProcessingImage(image: image)
     }
 }
 

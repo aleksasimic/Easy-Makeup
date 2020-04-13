@@ -265,6 +265,57 @@
             </objects>
             <point key="canvasLocation" x="1726" y="136"/>
         </scene>
+        <!--Process Selfie View Controller-->
+        <scene sceneID="JDF-mb-E7U">
+            <objects>
+                <viewController storyboardIdentifier="ProcessSelfieViewController" id="f3J-xx-0Wc" customClass="ProcessSelfieViewController" customModule="Easy_Makeup" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zIY-Es-dP9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BzI-2y-jqw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmZ-pi-QsU" customClass="StepIndicatorView" customModule="Easy_Makeup" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="120"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Qgh-ug-Own"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cx3-gP-Vrb" customClass="BottomNavigationView" customModule="Easy_Makeup" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="836" width="414" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4Ks-ZD-XfH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="HsA-pZ-HTA" firstAttribute="trailing" secondItem="BzI-2y-jqw" secondAttribute="trailing" id="1Pz-jb-yxG"/>
+                            <constraint firstAttribute="bottom" secondItem="cx3-gP-Vrb" secondAttribute="bottom" id="2qu-fn-3uO"/>
+                            <constraint firstItem="kmZ-pi-QsU" firstAttribute="top" secondItem="HsA-pZ-HTA" secondAttribute="top" id="7eN-bQ-Xhu"/>
+                            <constraint firstAttribute="bottom" secondItem="BzI-2y-jqw" secondAttribute="bottom" id="LJj-Na-7qe"/>
+                            <constraint firstItem="HsA-pZ-HTA" firstAttribute="trailing" secondItem="kmZ-pi-QsU" secondAttribute="trailing" id="V07-8v-tBP"/>
+                            <constraint firstItem="HsA-pZ-HTA" firstAttribute="trailing" secondItem="cx3-gP-Vrb" secondAttribute="trailing" id="gXa-Xr-fNy"/>
+                            <constraint firstItem="BzI-2y-jqw" firstAttribute="top" secondItem="HsA-pZ-HTA" secondAttribute="top" id="imp-Or-fvs"/>
+                            <constraint firstItem="BzI-2y-jqw" firstAttribute="leading" secondItem="HsA-pZ-HTA" secondAttribute="leading" id="jsr-AW-wWY"/>
+                            <constraint firstItem="cx3-gP-Vrb" firstAttribute="leading" secondItem="HsA-pZ-HTA" secondAttribute="leading" id="ukd-z9-pAT"/>
+                            <constraint firstItem="kmZ-pi-QsU" firstAttribute="leading" secondItem="HsA-pZ-HTA" secondAttribute="leading" id="zEd-2K-phd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HsA-pZ-HTA"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomNavigationView" destination="cx3-gP-Vrb" id="NeG-Gi-mdz"/>
+                        <outlet property="currentImageView" destination="BzI-2y-jqw" id="5CZ-AI-VYM"/>
+                        <outlet property="stepIndicatorView" destination="kmZ-pi-QsU" id="gDo-OO-GfX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="870-eX-j8h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="965" y="136"/>
+        </scene>
     </scenes>
     <resources>
         <image name="logo" width="384" height="384"/>

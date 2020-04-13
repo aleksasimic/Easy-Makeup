@@ -60,32 +60,38 @@ class StepIndicatorView: UIView {
         stepOneCircleView.circleColor = UIColor.clear
         stepTwoCircleView.circleColor = UIColor.clear
         stepThreeCircleView.circleColor = UIColor.clear
-       // firstToSecondLineHeightConstraint.constant = 1.0
+        firstToSecondLineHeightConstraint.constant = 1.0
         secondToThirdLineHeightConstraint.constant = 1.0
+        self.view.backgroundColor = UIColor.themeGrayColor()
     }
 
     private func setupTakeSelfieStep() {
         stepOneCircleView.circleColor = UIColor.white
         stepTwoCircleView.circleColor = UIColor.clear
         stepThreeCircleView.circleColor = UIColor.clear
-      //  firstToSecondLineHeightConstraint.constant = 1.0
+        firstToSecondLineHeightConstraint.constant = 1.0
         secondToThirdLineHeightConstraint.constant = 1.0
+        self.backgroundColor = UIColor.clear
+        self.view.backgroundColor = UIColor.themeGrayColorWithOpacity()
     }
 
     private func setupPickColorStep() {
         stepOneCircleView.circleColor = UIColor.white
         stepTwoCircleView.circleColor = UIColor.white
         stepThreeCircleView.circleColor = UIColor.clear
-     //   firstToSecondLineHeightConstraint.constant = 2.0
+        firstToSecondLineHeightConstraint.constant = 2.0
         secondToThirdLineHeightConstraint.constant = 1.0
+        self.backgroundColor = UIColor.clear
+        self.view.backgroundColor = UIColor.themeGrayColorWithOpacity()
     }
 
     private func setupChooseProductsStep() {
         stepOneCircleView.circleColor = UIColor.white
         stepTwoCircleView.circleColor = UIColor.white
         stepThreeCircleView.circleColor = UIColor.white
-      //  firstToSecondLineHeightConstraint.constant = 2.0
+        firstToSecondLineHeightConstraint.constant = 2.0
         secondToThirdLineHeightConstraint.constant = 2.0
+        self.view.backgroundColor = UIColor.themeGrayColor()
     }
 }
 

@@ -45,18 +45,20 @@ class BottomNavigationView: UIView {
     
     private func setupTakeSelfieStep() {
         backLabel.text = String.TryAgain
-        self.backgroundColor = UIColor.themeGrayColorWithOpacity()
+        self.backgroundColor = UIColor.clear
+        view.backgroundColor = UIColor.themeGrayColorWithOpacity()
     }
     
     private func setupPickColorStep() {
         backLabel.text = String.Back
-        self.backgroundColor = UIColor.themeGrayColorWithOpacity()
+        self.backgroundColor = UIColor.clear
+        self.view.backgroundColor = UIColor.themeGrayColorWithOpacity()
     }
     
     private func setupChooseProductsStep() {
         backLabel.text = String.Back
         navigateNextStackView.isHidden = true
-        self.backgroundColor = UIColor.themeGrayColor()
+        self.view.backgroundColor = UIColor.themeGrayColor()
     }
     
     func setupLabels() {

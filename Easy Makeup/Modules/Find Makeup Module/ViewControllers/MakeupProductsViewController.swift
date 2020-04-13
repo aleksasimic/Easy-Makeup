@@ -46,6 +46,7 @@ private extension MakeupProductsViewController {
         viewModel.currentStep
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] in
+                self?.stepIndicatorView.setupViews(forStep: $0)
                 self?.bottomNavigationView.setupViewForCurrentStep(step: $0)
             })
             .disposed(by: bag)
