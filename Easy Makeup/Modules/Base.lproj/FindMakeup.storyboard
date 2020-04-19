@@ -273,6 +273,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YLU-6y-j5z">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BzI-2y-jqw">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                             </imageView>
@@ -283,6 +287,25 @@
                                     <constraint firstAttribute="height" constant="120" id="Qgh-ug-Own"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nrE-fX-mOw">
+                                <rect key="frame" x="0.0" y="656" width="414" height="180"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wub-Nn-NeM" customClass="ColorBrightnessAdjustView" customModule="Easy_Makeup" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="wR7-3i-kc1"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HY4-AF-ENk" customClass="PopupView" customModule="Easy_Makeup" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="100" width="414" height="80"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="VYc-qQ-asX"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cx3-gP-Vrb" customClass="BottomNavigationView" customModule="Easy_Makeup" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="836" width="414" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -294,21 +317,31 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="HsA-pZ-HTA" firstAttribute="trailing" secondItem="BzI-2y-jqw" secondAttribute="trailing" id="1Pz-jb-yxG"/>
+                            <constraint firstAttribute="bottom" secondItem="YLU-6y-j5z" secondAttribute="bottom" id="2Bo-ke-Azn"/>
+                            <constraint firstItem="YLU-6y-j5z" firstAttribute="leading" secondItem="HsA-pZ-HTA" secondAttribute="leading" id="2a7-AM-3h4"/>
                             <constraint firstAttribute="bottom" secondItem="cx3-gP-Vrb" secondAttribute="bottom" id="2qu-fn-3uO"/>
                             <constraint firstItem="kmZ-pi-QsU" firstAttribute="top" secondItem="HsA-pZ-HTA" secondAttribute="top" id="7eN-bQ-Xhu"/>
+                            <constraint firstItem="nrE-fX-mOw" firstAttribute="top" relation="greaterThanOrEqual" secondItem="kmZ-pi-QsU" secondAttribute="bottom" id="C5v-3a-eRZ"/>
+                            <constraint firstItem="cx3-gP-Vrb" firstAttribute="top" secondItem="nrE-fX-mOw" secondAttribute="bottom" id="F9N-Uz-n3J"/>
                             <constraint firstAttribute="bottom" secondItem="BzI-2y-jqw" secondAttribute="bottom" id="LJj-Na-7qe"/>
                             <constraint firstItem="HsA-pZ-HTA" firstAttribute="trailing" secondItem="kmZ-pi-QsU" secondAttribute="trailing" id="V07-8v-tBP"/>
+                            <constraint firstItem="HsA-pZ-HTA" firstAttribute="trailing" secondItem="nrE-fX-mOw" secondAttribute="trailing" id="bRe-ec-LdU"/>
                             <constraint firstItem="HsA-pZ-HTA" firstAttribute="trailing" secondItem="cx3-gP-Vrb" secondAttribute="trailing" id="gXa-Xr-fNy"/>
+                            <constraint firstItem="YLU-6y-j5z" firstAttribute="top" secondItem="HsA-pZ-HTA" secondAttribute="top" id="hwJ-p3-dgY"/>
                             <constraint firstItem="BzI-2y-jqw" firstAttribute="top" secondItem="HsA-pZ-HTA" secondAttribute="top" id="imp-Or-fvs"/>
                             <constraint firstItem="BzI-2y-jqw" firstAttribute="leading" secondItem="HsA-pZ-HTA" secondAttribute="leading" id="jsr-AW-wWY"/>
+                            <constraint firstItem="nrE-fX-mOw" firstAttribute="leading" secondItem="HsA-pZ-HTA" secondAttribute="leading" id="uOE-xe-GwG"/>
                             <constraint firstItem="cx3-gP-Vrb" firstAttribute="leading" secondItem="HsA-pZ-HTA" secondAttribute="leading" id="ukd-z9-pAT"/>
+                            <constraint firstItem="HsA-pZ-HTA" firstAttribute="trailing" secondItem="YLU-6y-j5z" secondAttribute="trailing" id="uwS-OK-eot"/>
                             <constraint firstItem="kmZ-pi-QsU" firstAttribute="leading" secondItem="HsA-pZ-HTA" secondAttribute="leading" id="zEd-2K-phd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HsA-pZ-HTA"/>
                     </view>
                     <connections>
                         <outlet property="bottomNavigationView" destination="cx3-gP-Vrb" id="NeG-Gi-mdz"/>
+                        <outlet property="colorPickerStackView" destination="nrE-fX-mOw" id="Vl4-BE-y9p"/>
                         <outlet property="currentImageView" destination="BzI-2y-jqw" id="5CZ-AI-VYM"/>
+                        <outlet property="popupView" destination="HY4-AF-ENk" id="ga9-FE-HFE"/>
                         <outlet property="stepIndicatorView" destination="kmZ-pi-QsU" id="gDo-OO-GfX"/>
                     </connections>
                 </viewController>

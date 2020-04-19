@@ -1,7 +1,7 @@
 import UIKit
 
 protocol FindMakeupProtocol {
-    func startTakingSelfie()
+    func showImagePicker()
     func startProcessingImage(image: UIImage)
     func showProducts()
     func goBack()

@@ -24,6 +24,9 @@
 		B4517B032440E7FD00405A55 /* CurrentStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4517B022440E7FD00405A55 /* CurrentStep.swift */; };
 		B4517B062440F51100405A55 /* PopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4517B052440F51100405A55 /* PopupView.xib */; };
 		B4517B082440F52900405A55 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4517B072440F52900405A55 /* PopupView.swift */; };
+		B4547EC1244C59D300BD4B4D /* UIColor+Brightness.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4547EC0244C59D300BD4B4D /* UIColor+Brightness.swift */; };
+		B4547EC4244C5B8100BD4B4D /* ColorBrightnessAdjustView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4547EC3244C5B8100BD4B4D /* ColorBrightnessAdjustView.xib */; };
+		B4547EC6244C67B500BD4B4D /* ColorBrightnessAdjustView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4547EC5244C67B500BD4B4D /* ColorBrightnessAdjustView.swift */; };
 		B4744BEA2440921A0037F010 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4744BE92440921A0037F010 /* CircleView.swift */; };
 		B4744BEC244093930037F010 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4744BEB244093930037F010 /* UIColor+Additions.swift */; };
 		B4744BEF244098990037F010 /* StepIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4744BEE244098990037F010 /* StepIndicatorView.xib */; };
@@ -43,7 +46,6 @@
 		B49F71AE243F477F0004BD66 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F71AD243F477F0004BD66 /* Coordinator.swift */; };
 		B49F71B4243F49700004BD66 /* FindMakeupCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F71B3243F49700004BD66 /* FindMakeupCoordinator.swift */; };
 		B49F71B6243F4FF50004BD66 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F71B5243F4FF50004BD66 /* HomeViewController.swift */; };
-		B49F71B8243F50AB0004BD66 /* TakeSelfieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F71B7243F50AB0004BD66 /* TakeSelfieViewController.swift */; };
 		B49F71BA243F52E30004BD66 /* ProcessSelfieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F71B9243F52E30004BD66 /* ProcessSelfieViewController.swift */; };
 		B49F71BC243F54580004BD66 /* MakeupProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F71BB243F54580004BD66 /* MakeupProductsViewController.swift */; };
 		B49F71BE243F59460004BD66 /* FindMakeupProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F71BD243F59460004BD66 /* FindMakeupProtocol.swift */; };
@@ -90,6 +92,9 @@
 		B4517B022440E7FD00405A55 /* CurrentStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentStep.swift; sourceTree = "<group>"; };
 		B4517B052440F51100405A55 /* PopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupView.xib; sourceTree = "<group>"; };
 		B4517B072440F52900405A55 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		B4547EC0244C59D300BD4B4D /* UIColor+Brightness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Brightness.swift"; sourceTree = "<group>"; };
+		B4547EC3244C5B8100BD4B4D /* ColorBrightnessAdjustView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorBrightnessAdjustView.xib; sourceTree = "<group>"; };
+		B4547EC5244C67B500BD4B4D /* ColorBrightnessAdjustView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorBrightnessAdjustView.swift; sourceTree = "<group>"; };
 		B4744BE92440921A0037F010 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		B4744BEB244093930037F010 /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		B4744BEE244098990037F010 /* StepIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepIndicatorView.xib; sourceTree = "<group>"; };
@@ -115,7 +120,6 @@
 		B49F71AD243F477F0004BD66 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B49F71B3243F49700004BD66 /* FindMakeupCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMakeupCoordinator.swift; sourceTree = "<group>"; };
 		B49F71B5243F4FF50004BD66 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		B49F71B7243F50AB0004BD66 /* TakeSelfieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeSelfieViewController.swift; sourceTree = "<group>"; };
 		B49F71B9243F52E30004BD66 /* ProcessSelfieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessSelfieViewController.swift; sourceTree = "<group>"; };
 		B49F71BB243F54580004BD66 /* MakeupProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeupProductsViewController.swift; sourceTree = "<group>"; };
 		B49F71BD243F59460004BD66 /* FindMakeupProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMakeupProtocol.swift; sourceTree = "<group>"; };
@@ -242,10 +246,20 @@
 			path = PopupView;
 			sourceTree = "<group>";
 		};
+		B4547EC2244C5AAA00BD4B4D /* ColorBrightnessAdjustView */ = {
+			isa = PBXGroup;
+			children = (
+				B4547EC5244C67B500BD4B4D /* ColorBrightnessAdjustView.swift */,
+				B4547EC3244C5B8100BD4B4D /* ColorBrightnessAdjustView.xib */,
+			);
+			path = ColorBrightnessAdjustView;
+			sourceTree = "<group>";
+		};
 		B4744BE8244090E80037F010 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				B4744BED2440986A0037F010 /* StepIndicatorView */,
+				B4547EC2244C5AAA00BD4B4D /* ColorBrightnessAdjustView */,
 				B4517B042440F4FF00405A55 /* PopupView */,
 				B4517AFB2440D49A00405A55 /* BottomNavigationView */,
 				B4744BE92440921A0037F010 /* CircleView.swift */,
@@ -272,6 +286,7 @@
 				B45050CC24436C40008278D7 /* CALayer+Borders.swift */,
 				B45050B824433F87008278D7 /* UIViewController+Rx.swift */,
 				B48C411E2443D3C600EBC7DC /* UIViewController+Utilites.swift */,
+				B4547EC0244C59D300BD4B4D /* UIColor+Brightness.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -395,7 +410,6 @@
 			isa = PBXGroup;
 			children = (
 				B49F71B5243F4FF50004BD66 /* HomeViewController.swift */,
-				B49F71B7243F50AB0004BD66 /* TakeSelfieViewController.swift */,
 				B49F71B9243F52E30004BD66 /* ProcessSelfieViewController.swift */,
 				B49F71BB243F54580004BD66 /* MakeupProductsViewController.swift */,
 			);
@@ -511,6 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B49F7184243F427B0004BD66 /* LaunchScreen.storyboard in Resources */,
+				B4547EC4244C5B8100BD4B4D /* ColorBrightnessAdjustView.xib in Resources */,
 				B49F7181243F427B0004BD66 /* Assets.xcassets in Resources */,
 				B4517AFD2440D53800405A55 /* BottomNavigationView.xib in Resources */,
 				B4517B062440F51100405A55 /* PopupView.xib in Resources */,
@@ -658,7 +673,7 @@
 				B4744BF12440AB200037F010 /* StepIndicatorView.swift in Sources */,
 				B49F71B4243F49700004BD66 /* FindMakeupCoordinator.swift in Sources */,
 				B48C411F2443D3C600EBC7DC /* UIViewController+Utilites.swift in Sources */,
-				B49F71B8243F50AB0004BD66 /* TakeSelfieViewController.swift in Sources */,
+				B4547EC6244C67B500BD4B4D /* ColorBrightnessAdjustView.swift in Sources */,
 				B48C41212443D5E200EBC7DC /* ProcessSelfieViewModel.swift in Sources */,
 				B45050B924433F87008278D7 /* UIViewController+Rx.swift in Sources */,
 				B49F71C0243F59660004BD66 /* FindMakeupContainer.swift in Sources */,
@@ -668,6 +683,7 @@
 				B49F71BA243F52E30004BD66 /* ProcessSelfieViewController.swift in Sources */,
 				B4517B002440E20800405A55 /* BottomNavigationView.swift in Sources */,
 				B45050BC2443402C008278D7 /* RealmProvider.swift in Sources */,
+				B4547EC1244C59D300BD4B4D /* UIColor+Brightness.swift in Sources */,
 				B4517B032440E7FD00405A55 /* CurrentStep.swift in Sources */,
 				B45050C324435787008278D7 /* ProductsTableViewCell.swift in Sources */,
 				B4744BEA2440921A0037F010 /* CircleView.swift in Sources */,

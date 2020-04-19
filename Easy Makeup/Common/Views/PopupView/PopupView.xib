@@ -19,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on your face where you like your skin tone the most" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ka-wL-ACe">
-                    <rect key="frame" x="10" y="10" width="323.5" height="35.5"/>
+                    <rect key="frame" x="10" y="10" width="323.5" height="40"/>
                     <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="16"/>
                     <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -49,7 +49,7 @@
                 <constraint firstItem="4Ka-wL-ACe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="Uq1-YL-wpx"/>
                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xNN-1m-gsL" secondAttribute="bottom" id="fAT-ol-3g5"/>
                 <constraint firstItem="ug7-Ez-5OJ" firstAttribute="trailing" secondItem="xNN-1m-gsL" secondAttribute="trailing" id="fqo-Ud-oLG"/>
-                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4Ka-wL-ACe" secondAttribute="bottom" id="tJF-GT-8fo"/>
+                <constraint firstAttribute="bottom" secondItem="4Ka-wL-ACe" secondAttribute="bottom" constant="10" id="tJF-GT-8fo"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="139" y="151"/>

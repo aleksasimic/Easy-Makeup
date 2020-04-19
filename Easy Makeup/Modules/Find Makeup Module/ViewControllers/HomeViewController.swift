@@ -28,7 +28,7 @@ private extension HomeViewController {
         takeSelfieButton.rx.tap.asObservable()
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] in
-                self?.coordinator?.startTakingSelfie()
+                self?.coordinator?.showImagePicker()
             })
             .disposed(by: bag)
     }

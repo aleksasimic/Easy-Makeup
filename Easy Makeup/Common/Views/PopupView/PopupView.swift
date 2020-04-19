@@ -28,12 +28,15 @@ class PopupView: UIView {
         return UINib(nibName: "PopupView", bundle: Bundle.main).instantiate(withOwner: self, options: nil).first as! UIView
     }
     
-    private func setupLabels(forStep step: CurrentStep) {
+    func setupViews(forStep step: CurrentStep) {
         switch step {
         case .pickColor:
             descriptionLabel.text = String.ColorPickerPopupText
+            self.view.backgroundColor = UIColor.clear
+            self.backgroundColor = UIColor.whiteColorWithOpacity()
         case .chooseProducts:
             descriptionLabel.text = String.ColorPickerPopupText
+            self.backgroundColor = UIColor.white
         default:
             break
         }
@@ -41,6 +44,6 @@ class PopupView: UIView {
 }
 
 private extension String {
-    static let ColorPickerPopupText = "Tap on your face where you like your skin tone most"
+    static let ColorPickerPopupText    = "Tap on your face where you like your skin tone most"
     static let ChooseProductsPopupText = "Use this product to achieve your wanted skin"
 }

@@ -22,33 +22,19 @@ final class FindMakeupCoordinator: Coordinator {
 }
 
 extension FindMakeupCoordinator: FindMakeupProtocol {
-    func startTakingSelfie() {
-        guard let currentVc = navigationController.topViewController else { return }
-        
-        let imagePicker = UIImagePickerController()
-        
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
-            imagePicker.sourceType = .camera
-        } else if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary) {
-            imagePicker.sourceType = .photoLibrary
-        }
-        
-        imagePicker.allowsEditing = true
-        imagePicker.delegate = currentVc as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
-        imagePicker.modalPresentationStyle = .overFullScreen
-        
-        currentVc.present(imagePicker, animated: true, completion: nil)
+    func showImagePicker() {
+        guard let vc = navigationController.topViewController else { return }
+        presentImagePicker(inViewController: vc)
     }
     
     func startProcessingImage(image: UIImage) {
         let vc = ProcessSelfieViewController.instantiate()
-        
         vc.coordinator = self
-        vc.viewModelBuilder = {
-            ProcessSelfieViewModel(currentImage: Observable.just(image), step: Observable.just(CurrentStep.takeSelfie))
+        vc.viewModelBuilder = { goToNextStepTrigger, goToPreviousStepTrigger in
+            ProcessSelfieViewModel(goToNextStepTrigger: goToNextStepTrigger, goToPreviousStepTrigger: goToPreviousStepTrigger, step: Observable.just(CurrentStep.takeSelfie), image: Observable.just(image))
         }
         
-        navigationController.pushViewController(vc, animated: true)
+        navigationController.pushViewController(vc, animated: false)
     }
     
     func showProducts() {
@@ -71,6 +57,11 @@ extension FindMakeupCoordinator: FindMakeupProtocol {
     
     func goBack() {
         navigationController.popViewController(animated: true)
+    }
+    
+    func presentImagePicker(inViewController vc: UIViewController) {
+        container.imagePicker.delegate = vc as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        vc.present(container.imagePicker, animated: true, completion: nil)
     }
 }
 

@@ -11,6 +11,6 @@ public extension UIColor {
     }
     
     class func whiteColorWithOpacity() -> UIColor {
-        return UIColor(red: 255.0/255, green: 255.0/255, blue: 255.0/255, alpha: 0.5)
+        return UIColor(red: 255.0/255, green: 255.0/255, blue: 255.0/255, alpha: 0.95)
     }
 }
