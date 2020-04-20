@@ -277,7 +277,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BzI-2y-jqw">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BzI-2y-jqw" customClass="CiImageView" customModule="Easy_Makeup" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kmZ-pi-QsU" customClass="StepIndicatorView" customModule="Easy_Makeup" customModuleProvider="target">
@@ -339,8 +339,9 @@
                     </view>
                     <connections>
                         <outlet property="bottomNavigationView" destination="cx3-gP-Vrb" id="NeG-Gi-mdz"/>
+                        <outlet property="colorPickerAdjustView" destination="wub-Nn-NeM" id="2Jb-hG-cAl"/>
                         <outlet property="colorPickerStackView" destination="nrE-fX-mOw" id="Vl4-BE-y9p"/>
-                        <outlet property="currentImageView" destination="BzI-2y-jqw" id="5CZ-AI-VYM"/>
+                        <outlet property="currentImageView" destination="BzI-2y-jqw" id="gJ7-Zv-1LC"/>
                         <outlet property="popupView" destination="HY4-AF-ENk" id="ga9-FE-HFE"/>
                         <outlet property="stepIndicatorView" destination="kmZ-pi-QsU" id="gDo-OO-GfX"/>
                     </connections>

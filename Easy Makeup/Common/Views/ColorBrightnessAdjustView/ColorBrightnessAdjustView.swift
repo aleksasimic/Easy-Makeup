@@ -38,16 +38,16 @@ class ColorBrightnessAdjustView: UIView {
     }
     
     private func bindActions() {
-        addButton.rx.tap.asObservable()
+        addButton.rx.anyGesture(.tap(),.longPress())
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] in
+            .subscribe(onNext: { [weak self] _ in
                 self?.setupBrightnessIncrease()
             })
             .disposed(by: bag)
         
-        substractButton.rx.tap.asObservable()
+        substractButton.rx.anyGesture(.tap(), .longPress())
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] in
+            .subscribe(onNext: { [weak self] _ in
                 self?.setupBrightnessDecrease()
             })
             .disposed(by: bag)

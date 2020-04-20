@@ -11,16 +11,16 @@ struct ProcessSelfieViewModel {
         
         self.image = image
         
-        let stepUpdate = goToNextStepTrigger
-            .map {
+        let nextStepUpdate = goToNextStepTrigger
+            .map { _ in 
                 CurrentStep.pickColor
-            }
+        }
         
-        let stepUpdate2 = goToPreviousStepTrigger
+        let previousStepUpdate = goToPreviousStepTrigger
             .map {
                 CurrentStep.takeSelfie
-            }
+        }
         
-        self.step = Observable.of(step, stepUpdate, stepUpdate2).merge()
+        self.step = Observable.of(step, nextStepUpdate, previousStepUpdate).merge()
     }
 }

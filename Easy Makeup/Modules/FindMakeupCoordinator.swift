@@ -37,7 +37,9 @@ extension FindMakeupCoordinator: FindMakeupProtocol {
         navigationController.pushViewController(vc, animated: false)
     }
     
-    func showProducts() {
+    func showProducts(forColor color: UIColor?) {
+        //The color will be probably used to fetch appropriate products for user
+        
         let vc = MakeupProductsViewController.instantiate()
         vc.coordinator = self
         vc.viewModelBuilder = { loadTrigger in
@@ -48,7 +50,9 @@ extension FindMakeupCoordinator: FindMakeupProtocol {
         navigationController.pushViewController(vc, animated: true)
     }
     
-    func showProductsWebsite() {
+    func showProductsWebsite(forSelectedProducts products: [Product]) {
+        //The products will probably be used to show appropriate website or page on website for selected products
+        
         guard let url = URL(string: Constants.ProductsLink) else { return }
         
         let svc = SFSafariViewController(url: url)

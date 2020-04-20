@@ -8,6 +8,7 @@ class MakeupProductsViewController: UIViewController, Storyboarded {
     
     var coordinator: FindMakeupProtocol?
     var viewModelBuilder: MakeupProductsViewModelBuilder?
+    var dataSource: MakeupProductsDatasource!
     
     private let bag = DisposeBag()
     
@@ -28,13 +29,13 @@ private extension MakeupProductsViewController {
     func setup() {
         setupUI()
         setupViewModel()
-        bindActions()
     }
     
     func setupViewModel() {
         if let viewModel = createViewModel() {
             bindViewModel(viewModel)
-            setupDataSource(withData: viewModel.products)
+            dataSource = setupDataSource(withData: viewModel.products)
+            bindActions(dataSource)
         }
     }
     
@@ -52,7 +53,7 @@ private extension MakeupProductsViewController {
             .disposed(by: bag)
     }
     
-    func bindActions() {
+    func bindActions(_ dataSource: MakeupProductsDatasource) {
         bottomNavigationView.navigateBackStackView.rx.tapGesture().skip(1)
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] _ in
@@ -62,7 +63,8 @@ private extension MakeupProductsViewController {
         
         buyProductButton.rx.tap.asObservable()
             .subscribe(onNext: { [weak self] in
-                self?.coordinator?.showProductsWebsite()
+                self?.coordinator?.showProductsWebsite(forSelectedProducts: dataSource.selectedProducts)
+                self?.dataSource.emptySelected()
             })
             .disposed(by: bag)
         
@@ -74,8 +76,8 @@ private extension MakeupProductsViewController {
             .disposed(by: bag)
     }
     
-    func setupDataSource(withData data: Observable<[Product]>) {
-        _ = MakeupProductsDatasource(withTableView: productsTableView, products: data)
+    func setupDataSource(withData data: Observable<[Product]>) -> MakeupProductsDatasource {
+        return MakeupProductsDatasource(withTableView: productsTableView, products: data)
     }
 }
 

@@ -4,6 +4,7 @@ class MakeupProductsDatasource: NSObject, UITableViewDataSource {
     private var data: [Product] = []
     private let tableView: UITableView
     private let bag = DisposeBag()
+    var selectedProducts: [Product] = []
     
     init(withTableView tableView: UITableView,
          products: Observable<[Product]>) {
@@ -11,6 +12,7 @@ class MakeupProductsDatasource: NSObject, UITableViewDataSource {
         super.init()
         setupTableView()
         setupUpdate(withData: products)
+        bindActions()
     }
     
     private func setupUpdate(withData data: Observable<[Product]>) {
@@ -24,6 +26,28 @@ class MakeupProductsDatasource: NSObject, UITableViewDataSource {
     
     private func setupTableView() {
         self.tableView.dataSource = self
+    }
+    
+    private func bindActions() {
+        tableView.rx.itemSelected.asObservable()
+            .map { [weak self] in
+                (self?.getItem(atIndexPath: $0))!
+            }
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] in
+                self?.selectedProducts.append($0)
+            })
+            .disposed(by: bag)
+        
+        tableView.rx.itemDeselected.asObservable()
+            .map { [weak self] in
+                (self?.getItem(atIndexPath: $0))!
+            }
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] productToRemove in
+                self?.selectedProducts.removeAll(where: { $0.name == productToRemove.name })
+            })
+            .disposed(by: bag)
     }
     
     private func reload(withData data: [Product]) {
@@ -60,5 +84,11 @@ extension MakeupProductsDatasource {
         cell.separatorInset = UIEdgeInsets.zero
         cell.layoutMargins = UIEdgeInsets.zero
         return cell
+    }
+}
+
+extension MakeupProductsDatasource {
+    public func emptySelected() {
+        selectedProducts = []
     }
 }

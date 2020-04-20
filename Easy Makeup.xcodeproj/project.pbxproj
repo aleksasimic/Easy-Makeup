@@ -10,6 +10,7 @@
 		5E1F8B21E59ECE832AD92F00 /* Pods_Easy_Makeup_Easy_MakeupUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23D8FD18DB6F4633174CDED0 /* Pods_Easy_Makeup_Easy_MakeupUITests.framework */; };
 		6B60D1C9BE08E22FEAA2E5BE /* Pods_Easy_MakeupTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E8B4B42C24DA7286AFDE1D /* Pods_Easy_MakeupTests.framework */; };
 		A31536F4DEB5159764D223AA /* Pods_Easy_Makeup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 116C09F8F579EF1A95444959 /* Pods_Easy_Makeup.framework */; };
+		B44E211F244CEFF70090FB47 /* CiImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B44E211E244CEFF70090FB47 /* CiImageView.swift */; };
 		B45050B924433F87008278D7 /* UIViewController+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45050B824433F87008278D7 /* UIViewController+Rx.swift */; };
 		B45050BC2443402C008278D7 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45050BB2443402C008278D7 /* RealmProvider.swift */; };
 		B45050BE2443409D008278D7 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45050BD2443409D008278D7 /* Product.swift */; };
@@ -33,7 +34,6 @@
 		B4744BF12440AB200037F010 /* StepIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4744BF02440AB200037F010 /* StepIndicatorView.swift */; };
 		B479BFB6243FC73200033AFE /* UIFont+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = B479BFB5243FC73200033AFE /* UIFont+Styles.swift */; };
 		B479BFB8243FD48800033AFE /* UIButton+Borders.swift in Sources */ = {isa = PBXBuildFile; fileRef = B479BFB7243FD48800033AFE /* UIButton+Borders.swift */; };
-		B48C411F2443D3C600EBC7DC /* UIViewController+Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C411E2443D3C600EBC7DC /* UIViewController+Utilites.swift */; };
 		B48C41212443D5E200EBC7DC /* ProcessSelfieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48C41202443D5E200EBC7DC /* ProcessSelfieViewModel.swift */; };
 		B49F7178243F427A0004BD66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F7177243F427A0004BD66 /* AppDelegate.swift */; };
 		B49F717A243F427A0004BD66 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49F7179243F427A0004BD66 /* SceneDelegate.swift */; };
@@ -78,6 +78,7 @@
 		74EF06D8143ACAA0AEFEBA58 /* Pods-Easy Makeup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy Makeup.debug.xcconfig"; path = "Target Support Files/Pods-Easy Makeup/Pods-Easy Makeup.debug.xcconfig"; sourceTree = "<group>"; };
 		831DD187EB957C1CD5ACE91B /* Pods-Easy Makeup-Easy MakeupUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy Makeup-Easy MakeupUITests.release.xcconfig"; path = "Target Support Files/Pods-Easy Makeup-Easy MakeupUITests/Pods-Easy Makeup-Easy MakeupUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9BD65E832A74BC676FABD3A8 /* Pods-Easy MakeupTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Easy MakeupTests.release.xcconfig"; path = "Target Support Files/Pods-Easy MakeupTests/Pods-Easy MakeupTests.release.xcconfig"; sourceTree = "<group>"; };
+		B44E211E244CEFF70090FB47 /* CiImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CiImageView.swift; sourceTree = "<group>"; };
 		B45050B824433F87008278D7 /* UIViewController+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Rx.swift"; sourceTree = "<group>"; };
 		B45050BB2443402C008278D7 /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
 		B45050BD2443409D008278D7 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -101,7 +102,6 @@
 		B4744BF02440AB200037F010 /* StepIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepIndicatorView.swift; sourceTree = "<group>"; };
 		B479BFB5243FC73200033AFE /* UIFont+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Styles.swift"; sourceTree = "<group>"; };
 		B479BFB7243FD48800033AFE /* UIButton+Borders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Borders.swift"; sourceTree = "<group>"; };
-		B48C411E2443D3C600EBC7DC /* UIViewController+Utilites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utilites.swift"; sourceTree = "<group>"; };
 		B48C41202443D5E200EBC7DC /* ProcessSelfieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessSelfieViewModel.swift; sourceTree = "<group>"; };
 		B49F7174243F427A0004BD66 /* Easy Makeup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy Makeup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B49F7177243F427A0004BD66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -263,6 +263,7 @@
 				B4517B042440F4FF00405A55 /* PopupView */,
 				B4517AFB2440D49A00405A55 /* BottomNavigationView */,
 				B4744BE92440921A0037F010 /* CircleView.swift */,
+				B44E211E244CEFF70090FB47 /* CiImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -285,7 +286,6 @@
 				B45050C724436621008278D7 /* NumberFormatter+Utilities.swift */,
 				B45050CC24436C40008278D7 /* CALayer+Borders.swift */,
 				B45050B824433F87008278D7 /* UIViewController+Rx.swift */,
-				B48C411E2443D3C600EBC7DC /* UIViewController+Utilites.swift */,
 				B4547EC0244C59D300BD4B4D /* UIColor+Brightness.swift */,
 			);
 			path = Extensions;
@@ -662,6 +662,7 @@
 				B49F71BC243F54580004BD66 /* MakeupProductsViewController.swift in Sources */,
 				B4517B082440F52900405A55 /* PopupView.swift in Sources */,
 				B479BFB6243FC73200033AFE /* UIFont+Styles.swift in Sources */,
+				B44E211F244CEFF70090FB47 /* CiImageView.swift in Sources */,
 				B45050C624435C59008278D7 /* MakeupProductsDatasource.swift in Sources */,
 				B45050CD24436C40008278D7 /* CALayer+Borders.swift in Sources */,
 				B479BFB8243FD48800033AFE /* UIButton+Borders.swift in Sources */,
@@ -672,7 +673,6 @@
 				B45050C024434C31008278D7 /* MakeupProductsViewModel.swift in Sources */,
 				B4744BF12440AB200037F010 /* StepIndicatorView.swift in Sources */,
 				B49F71B4243F49700004BD66 /* FindMakeupCoordinator.swift in Sources */,
-				B48C411F2443D3C600EBC7DC /* UIViewController+Utilites.swift in Sources */,
 				B4547EC6244C67B500BD4B4D /* ColorBrightnessAdjustView.swift in Sources */,
 				B48C41212443D5E200EBC7DC /* ProcessSelfieViewModel.swift in Sources */,
 				B45050B924433F87008278D7 /* UIViewController+Rx.swift in Sources */,
